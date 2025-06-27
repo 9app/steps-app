@@ -1,6 +1,6 @@
 # Privacy Policy for Steps Manager
 
-**Effective Date**: June 27, 2025
+**Effective Date**: June 27, 2025  
 **App**: Steps Manager  
 **Developer**: Nguyen Lam  
 **Contact**: nguyenlamzx@gmail.com
@@ -46,9 +46,9 @@ Steps Manager does not use any third-party services that collect data, including
 
 Steps Manager may request minimal system permissions required for basic app functionality. We only request permissions that are essential for the app to work properly and do not use these permissions to collect data.
 
-## Children's Privacy
+## Age Restrictions
 
-Steps Manager does not collect any data from anyone, including children under 13. The app is safe for users of all ages.
+Steps Manager is intended for users aged 13 and above. We do not knowingly collect any information from children under 13. If you are under 13, please do not use this app.
 
 ## Data Security
 
