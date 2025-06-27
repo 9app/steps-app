@@ -1,6 +1,6 @@
 # Privacy Policy for Steps Manager
 
-**Effective Date**: December 27, 2024  
+**Effective Date**: June 27, 2025
 **App**: Steps Manager  
 **Developer**: Nguyen Lam  
 **Contact**: nguyenlamzx@gmail.com
@@ -70,6 +70,6 @@ Since we do not collect any data, there is no personal data to access, modify, o
 
 ---
 
-**Last Updated**: December 27, 2024
+**Last Updated**: June 27, 2025
 
 This Privacy Policy is available online at: [URL to be added when hosting this policy]
