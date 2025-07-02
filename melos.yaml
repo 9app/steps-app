@@ -1,0 +1,69 @@
+name: steps_app_monorepo
+repository: https://github.com/9app/steps-app-privacy
+
+packages:
+  - apps/*
+  - packages/*
+  - tools/*
+
+command:
+  bootstrap:
+    # Hooks to run after `melos bootstrap` is executed
+    hooks:
+      post: melos run build:dart_define_runner
+
+  clean:
+    # Hooks to run after `melos clean` is executed
+    hooks:
+      post: melos exec -- "flutter clean"
+
+scripts:
+  # Analyze all packages
+  analyze:
+    run: melos exec -- "dart analyze ."
+    description: Run analysis for all packages
+
+  # Format all packages
+  format:
+    run: melos exec -- "dart format --fix ."
+    description: Format all packages
+
+  # Run tests for all packages
+  test:
+    run: melos exec -- "flutter test"
+    description: Run tests for all packages
+    select-package:
+      flutter: true
+
+  # Build runner for all packages
+  build:dart_define_runner:
+    run: melos exec -- "dart run build_runner build --delete-conflicting-outputs"
+    description: Build runner for all packages
+    select-package:
+      depends-on: "build_runner"
+
+  # Get dependencies for all packages
+  get:
+    run: melos exec -- "flutter pub get"
+    description: Get dependencies for all packages
+
+  # Clean and get dependencies
+  clean:get:
+    run: |
+      melos clean
+      melos bootstrap
+    description: Clean and get dependencies for all packages
+
+  # Version all packages
+  version:
+    run: melos version --no-git-tag-version
+    description: Version all packages
+
+  # Publish all packages
+  publish:
+    run: melos publish --no-dry-run
+    description: Publish all packages
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"

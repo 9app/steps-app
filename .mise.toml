@@ -1,0 +1,17 @@
+[tools]
+# Flutter SDK version
+flutter = "3.24.0"
+
+# Node.js for web development
+node = "20.11.0"
+
+# Optional: Specific Dart version (usually comes with Flutter)
+# dart = "3.5.0"
+
+[env]
+# Flutter environment variables
+FLUTTER_ROOT = "{{config_root}}/.mise/installs/flutter/3.24.0"
+PATH = ["{{config_root}}/.mise/installs/flutter/3.24.0/bin", "$PATH"]
+
+# Project-specific environment
+PROJECT_ROOT = "{{config_root}}"
